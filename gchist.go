@@ -22,7 +22,7 @@ func main() {
 
 func doMain(c *cli.Context) {
 
-  db, err := sql.Open("sqlite3", "/Users/juchino/Library/Application Support/Google/Chrome/Default/History")
+  db, err := sql.Open("sqlite3", os.Getenv("HOME") + "/Library/Application Support/Google/Chrome/Default/History")
   if err != nil {
     panic(err)
   }
